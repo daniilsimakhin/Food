@@ -11,19 +11,22 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTabBar()
     }
+}
+
+//MARK: - TabBarController
+
+private extension TabBarController {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupTabBar() {
+        setViewControllers([
+            createNavigationController(MenuAssembly.configuredModule(), C.Texts.TabBar.menu, C.Images.TabBar.menu),
+            createNavigationController(MenuAssembly.configuredModule(), C.Texts.TabBar.menu, C.Images.TabBar.menu)
+        ], animated: true)
+        tabBar.backgroundColor = C.Colors.TabBar.background
+        tabBar.tintColor = C.Colors.TabBar.tint
+        tabBar.barTintColor = C.Colors.TabBar.barTint
+        tabBar.unselectedItemTintColor = C.Colors.TabBar.unselectedItemTint
     }
-    */
-
 }
