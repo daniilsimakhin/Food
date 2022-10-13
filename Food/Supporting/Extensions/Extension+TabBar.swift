@@ -9,13 +9,11 @@ import UIKit
 
 extension UITabBarController {
     
-    func createNavigationController(_ viewController: UIViewController, _ title: String, _ imageName: String) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: viewController)
+    func createNavigationController(_ viewController: UIViewController, _ title: String, _ imageName: String) -> UIViewController {
         let tabBarItem = UITabBarItem()
         tabBarItem.image = UIImage(named: imageName)
         tabBarItem.title = title
-        navigationController.tabBarItem = tabBarItem
-        navigationController.navigationBar.prefersLargeTitles = false
-        return navigationController
+        viewController.tabBarItem = tabBarItem
+        return viewController
     }
 }
