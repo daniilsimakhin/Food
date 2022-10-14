@@ -16,7 +16,6 @@ protocol MenuViewOutput: AnyObject {
     func pressedFoodCell(_ indexPath: IndexPath)
     func pressedBannerCell(_ indexPath: IndexPath)
     func passingCategoryIndex(_ indexPath: IndexPath)
-    
     func getCategories() -> [FoodCategory]
     func getFoods() -> [FoodModel]
     func getBanners() -> [BannerModel]
