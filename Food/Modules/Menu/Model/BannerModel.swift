@@ -8,5 +8,5 @@
 import Foundation
 
 struct BannerModel {
-    
+    let image: String
 }

@@ -21,12 +21,14 @@ private extension TabBarController {
     
     func setupTabBar() {
         setViewControllers([
-            createNavigationController(MenuAssembly.configuredModule(), C.Texts.TabBar.menu, C.Images.TabBar.menu),
             createNavigationController(MenuAssembly.configuredModule(), C.Texts.TabBar.menu, C.Images.TabBar.menu)
         ], animated: true)
         tabBar.backgroundColor = C.Colors.TabBar.background
         tabBar.tintColor = C.Colors.TabBar.tint
         tabBar.barTintColor = C.Colors.TabBar.barTint
         tabBar.unselectedItemTintColor = C.Colors.TabBar.unselectedItemTint
+        tabBar.layer.borderWidth = 0.3
+        tabBar.layer.borderColor = UIColor.separator.cgColor
+        tabBar.clipsToBounds = true
     }
 }
